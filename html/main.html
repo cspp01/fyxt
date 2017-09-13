@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+                                     initial-scale=1.0,
+                                     maximum-scale=1.0,
+                                     user-scalable=no">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/jquery.fullPage.css">
+	 <link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/scroll.js"></script>
+    <script src="../js/jquery.easing.min.js"></script>
+
+
+</head>
+<body>
+	<div class="modal fade col-sm-8 col-sm-offset-2" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<img src="" class="img-responsive">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">&times;</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#example-navbar-collapse">
+			<span class="sr-only">切换导航</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#"><img src="../images/logo.png"></a>
+	</div>
+	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+		<div class="con">
+		<ul class="nav navbar-nav" id="menu">
+			<li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+			<li data-menuanchor="page2"><a href="#page2">团队</a></li>
+			<li data-menuanchor="page3"><a href="#page3">动态</a></li>
+			<li data-menuanchor="page4"><a href="#page4">业务</a></li>
+			<li data-menuanchor="page5"><a href="#page5">关于</a></li>
+			<li data-menuanchor="page6"><a href="#page6">联系</a></li>
+			
+		</ul>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+      <li class="loginp"><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+      <li class="login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+    </ul>
+		<ul class="nav navbar-nav navbar-right" style="display:none;">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<img src="../images/p_pp.jpg"> <b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="p.html">系统</a></li>
+					<li class="divider"></li>
+					<li><a href="home.html">个人中心</a></li>
+					<li class="divider"></li>
+					<li><a href="feedback.html">个人反馈</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	 
+	</div>
+</nav>
+<img src="../images/down.png" class="img-responsive co_img">
+<div class="contact">
+	<img src="../images/p1.png" class="img-responsive">
+	<img src="../images/p2.png" class="img-responsive">
+	<img src="../images/pp.png" class="img-responsive">
+	<div class="block_p1"></div>
+</div>
+<div class="oppo">
+	<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 opop">
+		<span class="glyphicon glyphicon-remove close"></span>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-4 opo">
+				<div class="btn-group col-sm-8 col-sm-offset-4 form-group btn-group-lg" data-toggle="buttons">
+					<label class="btn btn-primary opp1 active">
+						<input type="radio" name="options" id="option1"> 登录
+					</label>
+					<label class="btn btn-primary opp2">
+						<input type="radio" name="options" id="option2"> 注册
+					</label>
+				</div>
+				<form class="form-horizontal" role="form" id="ok1">
+					<div class="form-group">
+						<span for="firstname" class="col-sm-3 control-label glyphicon glyphicon-user"></span>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="firstname" placeholder="请输入手机号/用户名">
+						</div>
+					</div>
+					<div class="form-group">
+						<span for="lastname" class="col-sm-3 control-label glyphicon glyphicon-cog"></span>
+						<div class="col-sm-9">
+							<input type="password" class="form-control" id="lastname" placeholder="请输入密码">
+						</div>
+					</div>
+					<div class="form-group">
+						<span for="lastname" class="col-sm-3 control-label glyphicon glyphicon-tag"></span>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" id="lastname" placeholder="请输入验证码">
+						</div>
+						<div class="col-sm-4">
+							1234
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-6 col-sm-2">
+							<button type="submit" class="btn btn-primary"><a href="p.html" style="font-size:14px;color:#fff;">登录</a></button>
+						</div>
+					</div>
+				</form>
+			<form class="form-horizontal" role="form" id="ok2">
+				<div class="form-group">
+					<span for="firstname" class="col-sm-3 control-label glyphicon glyphicon-user"></span>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id="firstname" placeholder="请输入手机号">
+					</div>
+				</div>
+				<div class="form-group">
+					<span for="lastname" class="col-sm-3 control-label glyphicon glyphicon-cog"></span>
+					<div class="col-sm-9">
+						<input type="password" class="form-control" id="lastname" placeholder="请输入密码(6-16字母或数字，字符">
+					</div>
+				</div>
+				<div class="form-group">
+					<span for="lastname" class="col-sm-3 control-label glyphicon glyphicon-cog"></span>
+					<div class="col-sm-9">
+						<input type="password" class="form-control" id="lastname" placeholder="请再次输入密码">
+					</div>
+				</div>
+				<div class="form-group">
+					<span for="lastname" class="col-sm-3 control-label glyphicon glyphicon-tag"></span>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" id="lastname" placeholder="请输入验证码">
+					</div>
+					<div class="col-sm-4">
+							<button type="submit" class="btn btn-primary">获取验证码</button>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-6 col-sm-2">
+						<button type="submit" class="btn btn-primary">注册</button>
+					</div>
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+<div id="dowebok">
+
+	<div class="section section1">
+
+			<div class="slide" id="banner_img3">
+                <div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 pp">
+							<div class="col-xs-8 col-xs-offset-2 col-sm-2 col-sm-offset-5 p">
+							<div class="pop">
+								<img src="../images/pop.png">
+							</div>
+						</div>
+                        </div>
+                </div>
+
+
+            </div>
+                </div>
+			<div class="slide" id="banner_img2">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 pp">
+							<ul>
+								<li>站在金字塔顶端的人</li>
+
+								<li><p>全面布局<span>互联网金融</span>领域</p>
+									<p>抢占<span>先机</span></p>
+									<p>全面开启<span>互联网+金融</span>生活</p></li>
+								<li>TOP&nbsp;PYRAMID<hr></li>
+								<li></li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="slide" id="banner_img1">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 pp">
+						<ul>
+							<li>站在金字塔顶端的人</li>
+							<li>TOP&nbsp;PYRAMID<hr></li>
+							<li><p>全面布局<span>互联网金融</span>领域</p>
+								<p>抢占<span>先机</span></p>
+								<p>全面开启<span>互联网+金融</span>生活</p></li>
+							<li></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	<div class="section section2" id="section_img2">
+		<div class="container">
+			<p>公司团队</p><h3>company team</h3>
+			<div class="row">
+
+				<img src="../img/team_1.jpg" class="img-responsive fl col-xs-3 col-sm-2 col-sm-offset-1" data-toggle="modal" data-target="#myModal">
+				<img src="../img/team_2.jpg" class="img-responsive fl col-xs-3 col-sm-2" data-toggle="modal" data-target="#myModal">
+				<img src="../img/team_3.jpg" class="img-responsive fl col-xs-3 col-sm-2" data-toggle="modal" data-target="#myModal">
+				<img src="../img/team_4.jpg" class="img-responsive fl col-xs-3 col-sm-2" data-toggle="modal" data-target="#myModal">
+				<img src="../img/team_5.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_6.jpg" class="img-responsive fl col-xs-3 col-sm-2 col-sm-offset-1">
+				<img src="../img/team_7.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_8.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_9.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_10.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_11.jpg" class="img-responsive fl col-xs-3 col-sm-2 col-sm-offset-1">
+				<img src="../img/team_12.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_13.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_14.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_15.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_16.jpg" class="img-responsive fl col-xs-3 col-sm-2 col-sm-offset-1">
+				<img src="../img/team_17.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_18.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_19.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+				<img src="../img/team_20.jpg" class="img-responsive fl col-xs-3 col-sm-2">
+                <ul class="opppo">
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;好运达团队</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;山岳团队</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;三人团队</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;好汉帮</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;龙腾团队</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;聚星之师</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;天下团队</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;海归团队</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;销售金英</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;聚宝盆</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;卡斯达克</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;桑普多</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;阿斯达桑普多</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;阿斯达斯的</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;发生地方撒</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;阿斯达斯</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;阿斯达萨萨达斯</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;冲锋团队</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;所得税团队</li>
+                    <li class="col-xs-6"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;囧团队</li>
+
+                </ul>
+			</div>
+		</div>
+	</div>
+	<div class="section section3">
+		<div class="container">
+            <p>公司动态</p>
+            <h3>company dynamics</h3>
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 col-sm-offset-1 mid_p">
+                    <img src="../images/up.png" class="img-responsive" id="up">
+                    <div class="p_he" id="p_he">
+						<div class="pp">
+
+                    <img src="../img/team_1.jpg" class="img-responsive">
+                    <img src="../img/team_2.jpg" class="img-responsive">
+                    <img src="../img/team_3.jpg" class="img-responsive">
+                    <img src="../img/team_4.jpg" class="img-responsive">
+                    <img src="../img/team_5.jpg" class="img-responsive">
+                            <img src="../img/team_1.jpg" class="img-responsive">
+                            <img src="../img/team_2.jpg" class="img-responsive">
+                            <img src="../img/team_3.jpg" class="img-responsive">
+                            <img src="../img/team_4.jpg" class="img-responsive">
+                            <img src="../img/team_5.jpg" class="img-responsive">
+							</div>
+                    </div>
+                    <img src="../images/d.png" class="img-responsive" id="d">
+                </div>
+                <div class="col-xs-8 col-sm-5 col-sm-offset-2 mid_pp">
+
+                   <h3>News</h3>
+					<div class="p_wid">
+                        <a href="ne.html"><p><span class="glyphicon glyphicon-asterisk"></span>
+							<b>获大奖活动i阿萨德joias降低哦啊时间打扫i</b>
+                        <span class="glyphicon glyphicon-chevron-right"></span></p></a>
+						<a href="ne.html"><p><span class="glyphicon glyphicon-asterisk"></span>
+							<b>获大奖活动i阿萨德joias降低哦啊时间打扫i</b>
+							<span class="glyphicon glyphicon-chevron-right"></span></p></a>
+						<a href="ne.html"><p><span class="glyphicon glyphicon-asterisk"></span>
+							<b>获大奖活动i阿萨德joias降低哦啊时间打扫i</b>
+							<span class="glyphicon glyphicon-chevron-right"></span></p></a>
+						<a href="ne.html"><p><span class="glyphicon glyphicon-asterisk"></span>
+							<b>获大奖活动i阿萨德joias降低哦啊时间打扫i</b>
+							<span class="glyphicon glyphicon-chevron-right"></span></p></a>
+						<a href="ne.html"><p><span class="glyphicon glyphicon-asterisk"></span>
+							<b>获大奖活动i阿萨德joias降低哦啊时间打扫i</b>
+							<span class="glyphicon glyphicon-chevron-right"></span></p></a>
+						<a href="ne.html"><p><span class="glyphicon glyphicon-asterisk"></span>
+							<b>获大奖活动i阿萨德joias降低哦啊时间打扫i</b>
+							<span class="glyphicon glyphicon-chevron-right"></span></p></a>
+                    </div>
+					<div class="m"><a href="nes.html"> <img src="../images/mo.png">
+
+						<img src="../images/mo1.png"></a></div>
+                </div>
+            </div>
+		</div>
+	</div>
+	<div class="section section4">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-xs-4 col-sm-2 col-sm-offset-1 op">
+
+					<div class="fo fp1">
+                        <img src="../images/p_p.jpg" class="img-responsive fl">
+                        <p class="">东坡披发仰天大呼“大江东去”，他面临的那些烦心琐事顷刻之间沉入滚滚波涛之中，消失得无影无踪。壮阔的滔滔江水让东坡选择忘记，忘记那些失意、悲伤，忘记那些仕途的不得意。</p>
+                        <h4 class="hp1"><span class="glyphicon glyphicon-leaf"></span><br>创作服务</h4>
+					</div>
+				</div>
+				<div class="col-xs-4 col-sm-2 op">
+
+					<div class="fo fp2">
+                        <img src="../images/p_p.jpg" class="img-responsive fl">
+                        <p>品正传媒自主运营和代理有报纸媒体、杂志媒体、户外广告媒体、售点广告媒体、 广播媒体、 电视媒体、网络媒体、新媒体等媒介，为有宣传推广需求的客户提供这些媒介的整合传播服务。</p>
+                        <h4 class="hp2"><span class="glyphicon glyphicon-unchecked"></span><br>媒介服务</h4>
+					</div>
+				</div>
+				<div class="col-xs-4 col-sm-2 op">
+
+					<div class="fo fp3">
+                        <img src="../images/p_p.jpg" class="img-responsive fl">
+                        <p>品正传媒结合自身平台优势给企业提供品牌整合、营销、传播、推广、策划、公关等全方位品牌代理服务或直接接管部分品牌的市场整合、营销、传播、推广、策划公关等工作，直接参与该品牌的市场运作工作有宣传推广</p>
+                        <h4 class="hp3"><span class="glyphicon glyphicon-record"></span><br>品牌代理</h4>
+					</div>
+				</div>
+				<div class="col-xs-4 col-xs-offset-2 col-sm-2 col-sm-offset-0 op">
+
+					<div class="fo fp4">
+                        <img src="../images/p_p.jpg" class="img-responsive fl">
+                        <p>品正传媒品牌研究事业机构设置有设计部、策划部、媒介研究部等部门，能够为客户提供专业的品牌整合营销策划、公关活动策划、宣传推广策划、品牌形象设计、广告摄制、展览策划、媒介资源组合等服务。</p>
+                        <h4 class="hp4"><span class="glyphicon glyphicon-tree-conifer"></span><br>融资业务</h4>
+					</div>
+				</div>
+				<div class="col-xs-4 col-sm-2 op">
+
+					<div class="fo fp5">
+                        <img src="../images/p_p.jpg" class="img-responsive fl">
+                        <p>提供给有需求的企业更具传达力的价值型宣传传播解决方案。</p>
+                        <h4 class="hp5"><span class="glyphicon glyphicon-heart"></span><br>影视策划</h4>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+        <div class="bj">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-11 col-sm-8 col-lg-offset-2 pop">
+                        <div class="po">
+                            <span><p class="glyphicon glyphicon-heart"></p><br>影视策划</span>
+                            <p>东坡披发仰天大呼“大江东去”，他面临的那些烦心琐事顷刻之间沉入滚滚波涛之p，消失得无影无踪。壮阔的滔滔江水让东坡选
+                            东坡披发仰天大呼“大江东去”，他面临的那些烦心琐事顷刻之间沉入滚滚波涛之中，消失得无影无踪。壮阔的滔滔江水让东坡选
+                            东坡披发仰天大呼“大江东去”，他面临的那些烦心琐事顷刻之间沉入滚滚波涛之中，消失得无影无踪。壮阔的滔滔江水让东坡选
+                            </p>
+                            <span>地址:中国-太原-欧林花园&nbsp;
+					联系电话:192391231209</span>
+                            <label class="glyphicon glyphicon-remove"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<div class="section section5">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-sm-offset-1">
+
+					<div class="p_he">
+						<ul>
+							<li class="active  col-sm-12">公司介绍</li>
+							<li class="col-sm-12">团队</li>
+							<li class="col-sm-12">动态<span>Video</span></li>
+
+						</ul>
+
+					</div>
+
+				</div>
+				<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-2 mid_pp">
+
+
+					<div class="p_wid">
+						<div class="slide1">
+						<h3>公司简介</h3>
+						<p>东坡披发仰天大呼“大江东去”，他面临的那些烦心琐事顷刻之间沉入滚滚波涛之中，消失得无影无踪。壮阔的滔滔江水让东坡选择忘记，忘记那些失意、悲伤，忘记那些仕途的不得意。
+						</p>
+						</div>
+						<div class="slide2">
+							<h3>公司简介</h3>
+							<p>风云系统
+
+
+团队在传统的互联网金融模式上，融合了新的金融模式，同时汇集了最专业的理财分析师，网络技术人员，金融投资专家和资深法律顾问，为大众提供最专业的投资建议。
+
+我们的网络技术人员实时掌控着最新的理财消息，理财分析师由此可以做出最专业的金融分析，然后金融投资专家可以提出最优的投资建议，而法律顾问团队则保障了所有投资行为的合法性和安全性。
+
+在互联网金融领域，风云系统或许年轻，但是却拥有着深厚的技术基础和平台资源。相信在不久的将来，风云系统便会成为互联
+							</p>
+						</div>
+						<div class="slide3">
+							<h3>公司简介</h3>
+							<p>东坡披发仰天大呼“大江东去”，他面临的那些烦心琐事顷刻之间沉入滚滚波涛之中，消失得无影无踪。壮阔的滔滔江水让东坡选择忘记，忘记那些失意、悲伤，忘记那些仕途的不得意。
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section section6">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-0">
+					<img src="../images/ma.jpg" class="img-responsive">
+				</div>
+				<div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0">
+					<div class="p">
+					<p>2193-8109238</p>
+					<p>中国-太原-欧林花园</p>
+					<p>联系电话:192391231209</p>
+					<p>邮编：29381283</p>
+					<p>邮箱：12039-122@qwecom</p>
+					</div>
+				</div>
+				<div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0">
+                    <div class="pp">
+					<p>地址：太原</p>
+					<p>中文域名:风云系统</p>
+					<p>fengyun2016 风云科技 版权所有</p>
+					<p>京ICP备888888号</p>
+					<p>京ICP备888888号</p>
+                    </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12">
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12">
+					<b>Quality, the future of the enterprise decisive battle field and eternal theme</b><br>
+					<b>品质，企业未来的决战场和永恒的主题</b>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript" src="../js/jquery.fullPage.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $('#dowebok').fullpage({
+                navigation: true,
+                verticalCentered: false,
+                css3: true,
+                loopBottom:true,
+                slidesNavigation:true,
+				navigationPosition:'left',
+                scrollingSpeed:300,
+                resize:true,
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90','#1bbc9b', '#4BBFC3'],
+                anchors: ['page1', 'page2', 'page3', 'page4','page5','page6'],
+				menu: '#menu',
+                afterLoad: function(anchorLink, index){
+                    if(index==1){
+						$(".co_img").show();
+                        if($(window).width()<768) {
+                            $(".contact").hide();
+                        }
+						$('.section1 #banner_img3').find('.pp').delay(500).animate({
+							//opacity:"1",
+							margin:"0"
+							//left:"0"
+						}, 1000, 'easeOutExpo');
+						$('.section1 #banner_img3').find('.pop').delay(1500).animate({
+							opacity: 1
+						}, 4000, 'easeOutExpo');
+						$('.section1 #banner_img3').find('.pop img').delay(2000).animate({
+							width:"40%",
+							height:"60%"
+						}, 4000, 'easeOutExpo');
+
+
+                    }
+					else if(index==2){
+						$(".co_img").show();
+                        if($(window).width()<768){
+                            $(".contact").hide();
+                            $('.section2').find('img').animate({
+                                opacity:"1",
+                                margin:"0",
+                                left:"0"
+                            }, 4000, 'easeOutExpo');
+                        }else{
+                        $('.section2').find('img').animate({
+                            opacity:"1",
+                            margin:"4px",
+                        left:"90px"
+                        }, 4000, 'easeOutExpo');}
+					}
+					else if(index==3){
+                        if($(window).width()<768) {
+                            $(".contact").hide();
+                        }
+						$(".co_img").show();
+                        $('.section3').find('.mid_pp').animate({
+                            right:"0"
+                        }, 1000, 'easeOutExpo');
+                        $('.section3').find('.mid_p').animate({
+                            left:"0"
+                        }, 1000, 'easeOutExpo');
+					}
+					else if(index==4){
+                        if($(window).width()<768) {
+                            $(".contact").hide();
+                        }
+						$(".co_img").show();
+                        $('.section4').find('.op:nth-of-type(1)').animate({
+                            left:"0"
+                        }, 3000, 'easeOutExpo');
+                        $('.section4').find('.op:nth-of-type(2)').delay(500).animate({
+                            opacity:"1"
+                        }, 2000, 'easeOutExpo');
+                        $('.section4').find('.op:nth-of-type(3)').animate({
+                            opacity:"1"
+                        }, 1000, 'easeOutExpo');
+                        $('.section4').find('.op:nth-of-type(4)').delay(500).animate({
+                            opacity:"1"
+                        }, 2000, 'easeOutExpo');
+                        $('.section4').find('.op:nth-of-type(5)').animate({
+                            right:"0"
+                        }, 3000, 'easeOutExpo');
+					}
+					else if(index==5){
+                        if($(window).width()<768) {
+                            $(".contact").hide();
+                        }
+                        $('.section5').find('.p_he ul').animate({
+                            margin:"0",
+                            opacity:"1"
+                        }, 3000, 'easeOutExpo');
+                        if($(window).width()<1360) {
+                        $('.section5').find('.p_wid').animate({
+                            margin:"0px 0 0 0",
+							opacity:"1"
+                        }, 3000, 'easeOutExpo');
+                        }else{
+                        $('.section5').find('.p_wid').animate({
+                            margin:"100px 0 0 0",
+							opacity:"1"
+                        }, 3000, 'easeOutExpo');
+                        }
+						$(".co_img").show();
+					}
+					else if(index==6){
+                        if($(window).width()<768) {
+                            $(".contact").show();
+                        }
+						$(".co_img").hide();
+					}
+
+                }
+            });
+
+
+            setInterval(function(){
+        $.fn.fullpage.moveSlideRight();
+    }, 10000);
+/*			$(".section .slide").mouseover(function(){
+				clearInterval(time);
+			});
+			$(".section .slide").mouseout(function(){
+				var time=setInterval(function(){
+					$.fn.fullpage.moveSlideRight();
+				}, 10000);
+			});*/
+        });
+    </script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$(".section2 img").click(function(){
+				var imgsrc=$(this).attr("src");
+				$(".modal-body img").attr("src",imgsrc);
+			});
+		});
+	</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".co_img").click(function () {
+			$.fn.fullpage.moveSectionDown();
+		})
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var time;
+		$(".contact img").mouseover(function(){
+			clearTimeout(time);
+			$(".contact .block_p1").fadeIn(1000);
+
+
+			var ind=$(this).index();
+			if(ind==0){
+
+				$(this).attr("src","../images/p1_1.png");
+				$(".contact .block_p1").html("<p><b>电话：</b>123123123</p>"+
+						"<p><b>地址：</b>克拉斯大陆sad类似的拉斯克</p>"+
+						"<p><b>邮箱：</b>123123123@qq.com </p>"+
+						"<p><b>电话：</b>123123123</p>");
+				$(".contact .block_p1").css({"top":"20px"});
+				}
+			else if(ind==1){
+				$(this).attr("src","../images/p2_2.png");
+
+				$(".contact .block_p1").html("<img src='../images/pl.png'> "+
+						"<img src='../images/pl.png'> "+
+						"<img src='../images/pl.png'>  ");
+				$(".contact .block_p1").css({"top":"85px"});
+			}
+			else if(ind==2){
+				$(this).attr("src","../images/pp_p.png");
+
+				$(".contact .block_p1").html("<img src='../images/ma.jpg'> ");
+				$(".contact .block_p1").css({"top":"154px"});
+			}
+		});
+	$(".contact img").mouseout(function() {
+		time=setInterval(function(){
+
+
+			$(".contact .block_p1").fadeOut(1000);
+
+		}, 1000);
+		var ind=$(this).index();
+		if(ind==0){
+
+			$(this).attr("src","../images/p1.png");
+
+		}
+		else if(ind==1){
+			$(this).attr("src","../images/p2.png");
+
+
+		}
+		else if(ind==2){
+			$(this).attr("src","../images/pp.png");
+
+		}
+	});
+	$(".contact .block_p1").mouseover(function() {
+		clearTimeout(time);
+			$(".contact .block_p1").show();
+
+
+	});
+	$(".contact .block_p1").mouseout(function() {
+		clearTimeout(time);
+		$(".contact .block_p1").hide();
+
+
+	});
+    $(".contact img").click(function() {
+        $(".contact .block_p1").toggle();
+
+
+    });
+
+});
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".p_he ul li:nth-of-type(1)").click(function(){
+			$(".slide1").show(500);
+			$(".slide2").hide(500);
+			$(".slide3").hide(500);
+
+		});
+		$(".p_he ul li:nth-of-type(2)").click(function(){
+			$(".slide2").show(500);
+			$(".slide1").hide(500);
+			$(".slide3").hide(500);
+
+		});
+		$(".p_he ul li:nth-of-type(3)").click(function(){
+			$(".slide3").show(500);
+			$(".slide2").hide(500);
+			$(".slide1").hide(500);
+
+		});
+	});
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $(".op").mouseover(function(){
+            $(this).find(".fo").animate({height:'+=20px'},1000);
+            $(this).find("img").animate({'border-width':'+=2px'},1000);
+
+        });
+        $(".op").mouseout(function(){
+            $(this).find(".fo").animate({height:'-=20px'});
+            $(this).find("img").animate({'border-width':'-=2px'});
+
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+
+
+        $(".op").click(function(){
+            var ind=$(this).index();
+            if(ind==0){
+                $(".bj .po>p").html("东坡披发仰天大呼“大江东去”，他面临的那些烦心琐事顷刻之间沉入滚滚波涛之中，消失得无影无踪。壮阔的滔滔江水让东坡选择忘记，忘记那些失意、悲伤，忘记那些仕途的不得意。");
+                $(".bj .po>span:nth-of-type(1)").html("<p class='glyphicon glyphicon-leaf'></p><br>创作服务");
+            }else if(ind==1) {
+                $(".bj .po>p").html("品正传媒自主运营和代理有报纸媒体、杂志媒体、户外广告媒体、售点广告媒体、 广播媒体、 电视媒体、网络媒体、新媒体等媒介，为有宣传推广需求的客户提供这些媒介的整合传播服务");
+                $(".bj .po>span:nth-of-type(1)").html("<p class='glyphicon glyphicon-unchecked'></p><br>媒介服务");
+            }else if(ind==2) {
+                $(".bj .po>p").html("品正传媒结合自身平台优势给企业提供品牌整合、营销、传播、推广、策划、公关等全方位品牌代理服务或直接接管部分品牌的市场整合、营销、传播、推广、策划公关等工作，直接参与该品牌的市场运作工作有宣传推广");
+                $(".bj .po>span:nth-of-type(1)").html("<p class='glyphicon glyphicon-record'></p><br>品牌代理");
+            }else if(ind==3) {
+                $(".bj .po>p").html("品正传媒品牌研究事业机构设置有设计部、策划部、媒介研究部等部门，能够为客户提供专业的品牌整合营销策划、公关活动策划、宣传推广策划、品牌形象设计、广告摄制、展览策划、媒介资源组合等服务");
+                $(".bj .po>span:nth-of-type(1)").html("<p class='glyphicon glyphicon-tree-conifer'></p><br>融资业务");
+            }else if(ind==4) {
+                $(".bj .po>p").html("提供给有需求的企业更具传达力的价值型宣传传播解决方案");
+                $(".bj .po>span:nth-of-type(1)").html("<p class='glyphicon glyphicon-heart'></p><br>影视策划");
+            }
+
+            var co=$(this).find(".fo h4").css("background");
+            var h=$(".bj .po").outerHeight();
+            var wh=$(window).height();
+            $(".po span").css("background",co);
+            $(".bj").show();
+            $(".bj .po").css("margin-top","-200px");
+            $(".bj .pop").css("height",wh);
+        });
+        $(".po label").click(function(){
+            $(".bj").hide();
+        });
+    });
+</script>
+<script type="text/javascript">
+        $(document).ready(function(){
+
+
+
+
+                var h=$(".section1 .pp ul").outerHeight();
+                var wh=$(window).height();
+                $(".section1 .pp ul").css("margin-top",-h/2);
+                $(".section1 .pp").css("height",wh);
+
+
+        });
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+
+
+
+   //     var h=$(".section .row").outerHeight();
+   //     var wh=$(window).height();
+     //   $(".section .row").css("margin-top",-h/2);
+    //    $(".section .row").css("top","50%");
+     //   $(".section .row").css("position","absolute");
+     //   $(".section .container").css("height",wh);
+
+
+    });
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+
+
+
+		var h=$(".section1 .p .pop").outerWidth();
+		var h1=$(".oppo .opop").outerHeight();
+		var hh=$(window).height();
+		var wh=$(window).width();
+		$(".section1 .p .pop").css("margin-top",-h/2);
+		$(".section1 .p").css("height",hh);
+		$(".section1 .p .pop").css("height",h);
+		$(".oppo .opop").css("margin-top",-h1/2);
+		$(".oppo").css("height",hh);
+		$(".oppo").css("width",wh);
+		$(".oppo").css("display","none");
+
+
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+
+
+
+		$(".opp1").click(function(){
+			$("#ok1").show();
+			$("#ok2").hide();
+		});
+		$(".opp2").click(function(){
+			$("#ok2").show();
+			$("#ok1").hide();
+		});
+		$(".close").click(function(){
+			$(".oppo").hide();
+		});
+		$(".login").click(function(){
+			$(".oppo").show();
+			$(".opp2").removeClass("active");
+			$(".opp1").addClass("active");
+			$("#ok1").fadeIn(3000);
+			$("#ok2").hide();
+		});
+		$(".loginp").click(function(){
+			$(".oppo").show();
+			$("#ok2").fadeIn(3000);
+			$("#ok1").hide();
+			$(".opp1").removeClass("active");
+			$(".opp2").addClass("active");
+		});
+
+
+	});
+</script>
+
+
+
+
+</body>
+</html>

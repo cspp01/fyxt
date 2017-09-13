@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+                                     initial-scale=1.0,
+                                     maximum-scale=1.0,
+                                     user-scalable=no">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/jquery.fullPage.css">
+	 <link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#example-navbar-collapse">
+			<span class="sr-only">切换导航</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#"><img src="../images/logo.png"></a>
+	</div>
+	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+		<div class="con">
+		<ul class="nav navbar-nav" id="menu">
+			<li data-menuanchor="page1"><a href="main.html#page1">首页</a></li>
+			<li data-menuanchor="page2"><a href="main.html#page2">团队</a></li>
+			<li data-menuanchor="page3"><a href="main.html#page3">动态</a></li>
+			<li data-menuanchor="page4"><a href="main.html#page4">业务</a></li>
+			<li data-menuanchor="page5"><a href="main.html#page5">关于</a></li>
+			<li data-menuanchor="page6"><a href="main.html#page6">联系</a></li>
+			
+		</ul>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="../images/p_pp.jpg"> <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="p.html">系统</a></li>
+                    <li class="divider"></li>
+                    <li><a href="home.html">个人中心</a></li>
+                    <li class="divider"></li>
+                    <li><a href="feedback.html">个人反馈</a></li>
+                </ul>
+            </li>
+    </ul>
+	</div>
+
+	 
+	</div>
+</nav>
+<div class="contact">
+	<img src="../images/p1.png" class="img-responsive">
+	<img src="../images/p2.png" class="img-responsive">
+	<img src="../images/pp.png" class="img-responsive">
+	<div class="block_p1"></div>
+</div>
+<div id="dowebok">
+
+	<div class="section section1">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="pp">
+						<div class="col-sm-12 pmm">
+							<div class="pm">
+							<p>反馈意见</p>
+							</div>
+						</div>
+						<div class="col-sm-8 col-sm-offset-2 fee1">
+							<p>尊敬的客户您好！</p>
+							<p>
+								您对我们的产品还满意吗？我们很乐意分享您的感受，欢迎提出意见和建议。我们会认真对待您的反馈。感谢您的关注和支持。将参考您的建议来改善我们的服务。
+
+
+							</p>
+						</div>
+						<div class="col-sm-8 col-sm-offset-2 fee2">
+							<form role="form">
+								<div class="form-group">
+									<label for="name">请在下方写下您的宝贵意见</label>
+									<textarea class="form-control" rows="20" placeholder="在这里可以您可以写下对公司的看法，如您的建议合理符合，我们会采用并给予您相应的奖励。感谢您的良言....."></textarea>
+								</div>
+							</form>
+						</div>
+						<div style="clear:both"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+		</div>
+</div>
+<script type="text/javascript" src="../js/jquery.fullPage.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $('#dowebok').fullpage({
+                verticalCentered: false,
+				autoScrolling: false,
+                css3: true,
+                resize:true,
+                sectionsColor: [],
+                afterLoad: function(anchorLink, index){
+                    if(index==1){
+						$(".co_img").show();
+                        if($(window).width()<768) {
+                            $(".contact").hide();
+                        }
+						$('.section1 #banner_img3').find('.pop img').delay(2000).animate({
+							width:"40%",
+							height:"60%"
+						}, 4000, 'easeOutExpo');
+
+
+                    }
+
+                }
+            });
+			if($(window).width()<765){
+				$('#dowebok').fullpage({
+					autoScrolling: false
+				});
+			}
+
+
+/*			$(".section .slide").mouseover(function(){
+				clearInterval(time);
+			});
+			$(".section .slide").mouseout(function(){
+				var time=setInterval(function(){
+					$.fn.fullpage.moveSlideRight();
+				}, 10000);
+			});*/
+        });
+    </script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var time;
+		$(".contact img").mouseover(function(){
+			clearTimeout(time);
+			$(".contact .block_p1").fadeIn(1000);
+
+
+			var ind=$(this).index();
+			if(ind==0){
+
+				$(this).attr("src","../images/p1_1.png");
+				$(".contact .block_p1").html("<p><b>电话：</b>123123123</p>"+
+						"<p><b>地址：</b>克拉斯大陆sad类似的拉斯克</p>"+
+						"<p><b>邮箱：</b>123123123@qq.com </p>"+
+						"<p><b>电话：</b>123123123</p>");
+				$(".contact .block_p1").css({"top":"20px"});
+			}
+			else if(ind==1){
+				$(this).attr("src","../images/p2_2.png");
+
+				$(".contact .block_p1").html("<img src='../images/pl.png'> "+
+						"<img src='../images/pl.png'> "+
+						"<img src='../images/pl.png'>  ");
+				$(".contact .block_p1").css({"top":"85px"});
+			}
+			else if(ind==2){
+				$(this).attr("src","../images/pp_p.png");
+
+				$(".contact .block_p1").html("<img src='../images/ma.jpg'> ");
+				$(".contact .block_p1").css({"top":"154px"});
+			}
+		});
+		$(".contact img").mouseout(function() {
+			time=setInterval(function(){
+
+
+				$(".contact .block_p1").fadeOut(1000);
+
+			}, 1000);
+			var ind=$(this).index();
+			if(ind==0){
+
+				$(this).attr("src","../images/p1.png");
+
+			}
+			else if(ind==1){
+				$(this).attr("src","../images/p2.png");
+
+
+			}
+			else if(ind==2){
+				$(this).attr("src","../images/pp.png");
+
+			}
+		});
+		$(".contact .block_p1").mouseover(function() {
+			clearTimeout(time);
+			$(".contact .block_p1").show();
+
+
+		});
+		$(".contact .block_p1").mouseout(function() {
+			clearTimeout(time);
+			$(".contact .block_p1").hide();
+
+
+		});
+		$(".contact img").click(function() {
+			$(".contact .block_p1").toggle();
+
+
+		});
+
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+
+
+
+	//	var h=$(".section1 .pp ul").outerHeight();
+		var wh=$(window).height();
+		var wp=$(".pmmp").width();
+	//	$(".section1 .pp ul").css("margin-top",-h/2);
+		//$(".section1 .pp").css("height",wh*0.9);
+		if(wh<765){
+			$(".section1 .pp").css("height","auto");
+		}
+		$(".section1 .ppp").css("width",wp);
+		$(".pmmp .pm ul a").click(function(){
+			var ind=$(this).index();
+			$(".pmmp .pm ul a li").removeClass("active");
+				$(".pmmp .pm ul a").eq(ind).find("li").addClass("active");
+
+
+		});
+		$("#pag").click(function(){
+			$(".pmmp .pm ul a li").removeClass("active");
+			$(".pmmp .pm ul a").eq(2).find("li").addClass("active");
+
+
+		});
+        var phone=$("#dl6").val();
+        var dh=phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
+        $("#dl6").val(dh);
+
+        $("#dlpp").hide();
+/*		$("#papa").mouseover(function(){
+			$(this).css("cursor","pointer");
+		});*/
+
+
+	});
+    function ka(pa,paa){
+
+        if(pa.length<20){
+            var t=$(pa).val();
+            $(pa).removeAttr("disabled").focus().val(t);
+        }else{
+            $(pa).removeAttr("disabled")
+        }
+        $(paa).next().show();
+        $(paa).hide();
+    }
+    function gua(pa,paa){
+        $(pa).attr("disabled",true);
+        $(paa).prev().show();
+        $(paa).hide();
+    }
+</script>
+
+
+
+
+</body>
+</html>
